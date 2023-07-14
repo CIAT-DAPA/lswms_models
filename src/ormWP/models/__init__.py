@@ -3,3 +3,4 @@ from .adm2 import Adm2
 from .adm3 import Adm3
 from .watershed import Watershed
 from .monitored import Waterpoint
+from .wp_content import Wpcontent
