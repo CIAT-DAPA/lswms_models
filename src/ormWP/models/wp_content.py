@@ -28,5 +28,5 @@ class Wpcontent(Document):
         'collection': 'wpcontent'
     }
     content=ListField(required=True)
-    watershed=ReferenceField(Waterpoint)
+    waterpoint=ReferenceField(Waterpoint)
     type= ReferenceField(Typecontent)
