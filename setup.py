@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="ormgap",
+    name="modelswp",
     version='v1.0.0',
     author="CarlosNasayo",
     author_email="c.nasayo@cgiar.com",
