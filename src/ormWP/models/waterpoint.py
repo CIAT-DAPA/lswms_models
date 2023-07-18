@@ -42,3 +42,4 @@ class Waterpoint(Document):
     climatology=ListField(required=False)
     other_attributes=ListField(required=False)
     watershed=ReferenceField(Watershed)
+    traced= ListField(required=True)
