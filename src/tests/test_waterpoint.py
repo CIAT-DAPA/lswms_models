@@ -67,7 +67,8 @@ class TestWaterpoint(unittest.TestCase):
             area=100.0,
             climatology=['climate1', 'climate2'],
             other_attributes=['attr1', 'attr2'],
-            watershed=self.watershed
+            watershed=self.watershed,
+            ext_id='512'
         )
 
     def tearDown(self):
@@ -80,7 +81,7 @@ class TestWaterpoint(unittest.TestCase):
         self.waterpoint.save()
         self.assertIsNotNone(self.waterpoint.id)
 
-        # Verifica que el Waterpoint haya sido creado exitosamente
+        # Verifica que el Waterpoint haya sido creado exitosament
         waterpoint = Waterpoint.objects(id=self.waterpoint.id).first()
         self.assertEqual(waterpoint.lat, 1.2345)
         self.assertEqual(waterpoint.lon, 2.3456)
