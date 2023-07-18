@@ -70,7 +70,8 @@ class Testwpcontent(unittest.TestCase):
             area=100.0,
             climatology=['climate1', 'climate2'],
             other_attributes=['attr1', 'attr2'],
-            watershed=self.watershed
+            watershed=self.watershed,
+            ext_id='512'
         )
 
         self.waterpoint.save()
