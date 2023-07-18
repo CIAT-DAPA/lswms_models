@@ -81,7 +81,7 @@ class TestWaterpoint(unittest.TestCase):
         self.waterpoint.save()
         self.assertIsNotNone(self.waterpoint.id)
 
-        # Verifica que el Waterpoint haya sido creado exitosamente
+        # Verifica que el Waterpoint haya sido creado exitosament
         waterpoint = Waterpoint.objects(id=self.waterpoint.id).first()
         self.assertEqual(waterpoint.lat, 1.2345)
         self.assertEqual(waterpoint.lon, 2.3456)
