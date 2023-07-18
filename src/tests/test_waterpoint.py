@@ -68,7 +68,8 @@ class TestWaterpoint(unittest.TestCase):
             climatology=['climate1', 'climate2'],
             other_attributes=['attr1', 'attr2'],
             watershed=self.watershed,
-            ext_id='512'
+            ext_id='512',
+            traced=['created_time', 'updated', 'active']
         )
 
     def tearDown(self):
