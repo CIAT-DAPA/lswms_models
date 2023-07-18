@@ -2,5 +2,8 @@ from .adm1 import Adm1
 from .adm2 import Adm2
 from .adm3 import Adm3
 from .watershed import Watershed
-from .monitored import Waterpoint
+from .monitored import Monitored
 from .wp_content import Wpcontent
+from .ws_content import Wscontent
+from .waterpoint import Waterpoint
+from .type_content import Typecontent

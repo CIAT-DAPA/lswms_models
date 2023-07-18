@@ -5,3 +5,6 @@ from .models.adm3 import Adm3
 from .models.watershed import Watershed
 from .models.wp_content import Wpcontent
 from .models.type_content import Typecontent
+from .models.waterpoint import Waterpoint
+from .models.monitored import Monitored
+from .models.ws_content import Wscontent
