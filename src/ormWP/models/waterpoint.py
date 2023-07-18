@@ -38,6 +38,7 @@ class Waterpoint(Document):
     lon=FloatField(max_length=100,required=True)
     name=StringField(max_length=100,required=True)
     area=FloatField(max_length=100,required=True)
+    ext_id=StringField(max_length=100,required=True)
     climatology=ListField(required=False)
     other_attributes=ListField(required=False)
     watershed=ReferenceField(Watershed)
