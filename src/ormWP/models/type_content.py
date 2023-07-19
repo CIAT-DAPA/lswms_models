@@ -4,7 +4,7 @@ from .watershed import Watershed
 class Typecontent(Document):
 
     """
-    Represents the tipe of content.
+    Represents the type of content.
 
     Attributes:
     ----------
@@ -14,9 +14,9 @@ class Typecontent(Document):
     Methods:
     -------
     save()
-        Saves the Group object to the database.
+        Saves the Type object to the database.
     delete()
-        Deletes the Group object from the database.
+        Deletes the Type object from the database.
     """
 
     meta = {
