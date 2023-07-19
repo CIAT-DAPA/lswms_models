@@ -4,7 +4,7 @@ from .waterpoint import Waterpoint
 class Monitored(Document):
 
     """
-    Represents a watershed in the database.
+    Represents a monitored data in the database.
 
     Attributes:
     ----------
@@ -18,9 +18,9 @@ class Monitored(Document):
     Methods:
     -------
     save()
-        Saves the Group object to the database.
+        Saves the monitored object to the database.
     delete()
-        Deletes the Group object from the database.
+        Deletes the monitored object from the database.
     """
 
     meta = {

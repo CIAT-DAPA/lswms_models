@@ -19,9 +19,9 @@ class Wpcontent(Document):
     Methods:
     -------
     save()
-        Saves the Group object to the database.
+        Saves the waterpointcontent object to the database.
     delete()
-        Deletes the Group object from the database.
+        Deletes the waterpointcontent object from the database.
     """
 
     meta = {
