@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="modelswp",
-    version='v1.0.5',
+    version='v1.0.6',
     author="CarlosNasayo",
     author_email="c.nasayo@cgiar.com",
     description="Modelos para la base de datos waterpoints",
