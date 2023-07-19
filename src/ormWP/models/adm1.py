@@ -11,16 +11,16 @@ class Adm1(Document):
     name: str
         Name of the adm1. required.
     ext_id: str
-        External identifier for the accession. Mandatory and unique.
+        External identifier for the Adm1. Mandatory and unique.
     traced: array
         array with created time, updated and a active 
         
     Methods:
     -------
     save()
-        Saves the Accession object to the database.
+        Saves the Adm1 object to the database.
     delete()
-        Deletes the Accession object from the database.
+        Deletes the Adm1 object from the database.
     """
 
     meta = {

@@ -21,9 +21,9 @@ class Adm3(Document):
     Methods:
     -------
     save()
-        Saves the Crop object to the database.
+        Saves the Adm3 object to the database.
     delete()
-        Deletes the Crop object from the database.
+        Deletes the Adm3 object from the database.
     """
 
     meta = {
