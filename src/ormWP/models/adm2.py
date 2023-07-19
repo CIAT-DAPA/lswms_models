@@ -19,9 +19,9 @@ class Adm2(Document):
     Methods:
     -------
     save()
-        Saves the Country object to the database.
+        Saves the Adm2 object to the database.
     delete()
-        Deletes the Country object from the database.
+        Deletes the Adm2 object from the database.
     """
     
     meta = {
