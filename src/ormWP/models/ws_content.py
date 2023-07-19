@@ -18,9 +18,9 @@ class Wscontent(Document):
     Methods:
     -------
     save()
-        Saves the Group object to the database.
+        Saves the watershedcontent object to the database.
     delete()
-        Deletes the Group object from the database.
+        Deletes the watershedcontent object from the database.
     """
 
     meta = {

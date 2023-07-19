@@ -4,7 +4,7 @@ from .watershed import Watershed
 class Waterpoint(Document):
 
     """
-    Represents a watershed in the database.
+    Represents a waterpoint in the database.
 
     Attributes:
     ----------
@@ -26,9 +26,9 @@ class Waterpoint(Document):
     Methods:
     -------
     save()
-        Saves the Group object to the database.
+        Saves the waterpoint object to the database.
     delete()
-        Deletes the Group object from the database.
+        Deletes the waterpoint object from the database.
     """
 
     meta = {

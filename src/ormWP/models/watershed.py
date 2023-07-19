@@ -11,7 +11,7 @@ class Watershed(Document):
     name: str
         Name of the watershed.
     area: float
-        Crop object that the group belongs to. Mandatory.
+        Crop object that the watershed belongs to. Mandatory.
     adm3: Adm3
         Adm3 reference.
     traced: array
@@ -20,9 +20,9 @@ class Watershed(Document):
     Methods:
     -------
     save()
-        Saves the Group object to the database.
+        Saves the watershed object to the database.
     delete()
-        Deletes the Group object from the database.
+        Deletes the watershed object from the database.
     """
 
     meta = {
