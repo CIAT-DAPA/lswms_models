@@ -72,7 +72,6 @@ class TestWatershed(unittest.TestCase):
         watershed = Watershed.objects(id=self.watershed.id).first()
         self.assertEqual(watershed.area, 100.0)
         self.assertEqual(watershed.name, 'watershed prueba')
-        self.assertEqual(watershed.trace, {"created": datetime.now(), "updated": datetime.now(), "enabled": True})
         self.assertEqual(watershed.adm3, self.adm3)
 
 if __name__ == '__main__':

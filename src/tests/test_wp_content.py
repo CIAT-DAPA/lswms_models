@@ -84,7 +84,7 @@ class Testwpcontent(unittest.TestCase):
         self.typecontent.save()
 
         self.wp_content = Wpcontent(
-            content=[{'contenido1':'vacas','contenido2':'peronas'}],
+            content={'contenido1':'vacas','contenido2':'peronas'},
             waterpoint=self.waterpoint,
             type=self.typecontent
         )
