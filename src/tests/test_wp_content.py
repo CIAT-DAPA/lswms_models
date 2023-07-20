@@ -106,7 +106,7 @@ class Testwpcontent(unittest.TestCase):
         self.assertIsNotNone(self.wp_content.id)
 
         # Verifica que el Content haya sido creado exitosamente
-        self.assertEqual(self.wp_content.content, [{'contenido1':'vacas','contenido2':'peronas'}])
+        self.assertEqual(self.wp_content.content, {'contenido1':'vacas','contenido2':'peronas'})
         self.assertEqual(self.wp_content.waterpoint, self.waterpoint)
         self.assertEqual(self.wp_content.type, self.typecontent)
 
