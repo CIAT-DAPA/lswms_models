@@ -1,4 +1,4 @@
-from mongoengine import Document, StringField, ReferenceField, ListField ,FloatField
+from mongoengine import Document, StringField, ReferenceField, ListField ,FloatField,DictField
 from .waterpoint import Waterpoint
 from .type_content import Typecontent
 
@@ -27,6 +27,6 @@ class Wpcontent(Document):
     meta = {
         'collection': 'wpcontent'
     }
-    content=ListField(required=True)
+    content=DictField()
     waterpoint=ReferenceField(Waterpoint)
     type= ReferenceField(Typecontent)

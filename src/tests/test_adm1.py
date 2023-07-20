@@ -6,6 +6,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 orm_dir_path = os.path.abspath(os.path.join(dir_path, '..'))
 sys.path.append(orm_dir_path)
 from ormWP.models.adm1 import Adm1
+from datetime import datetime
 
 # Conectarse a la base de datos de prueba
 
@@ -18,7 +19,7 @@ class Testadm1(unittest.TestCase):
         self.adm1 = Adm1(
             name='zona prueba',
             ext_id='1132',
-            traced=['created_time', 'updated', 'active']
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True}
         )
 
     def test_create_adm1(self):

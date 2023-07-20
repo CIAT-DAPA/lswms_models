@@ -1,4 +1,4 @@
-from mongoengine import Document, StringField, ReferenceField, ListField ,FloatField
+from mongoengine import Document, StringField, ReferenceField, ListField ,FloatField,DictField
 from .watershed import Watershed
 from .type_content import Typecontent
 class Wscontent(Document):
@@ -26,6 +26,6 @@ class Wscontent(Document):
     meta = {
         'collection': 'wscontent'
     }
-    content=ListField(required=True)
+    content=DictField()
     watershed=ReferenceField(Watershed)
     type= ReferenceField(Typecontent)
