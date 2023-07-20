@@ -1,4 +1,4 @@
-from mongoengine import Document, StringField, ReferenceField, ListField ,FloatField
+from mongoengine import Document, StringField, ReferenceField, ListField ,FloatField,DictField
 from .adm3 import Adm3
 
 class Watershed(Document):
@@ -14,7 +14,7 @@ class Watershed(Document):
         Crop object that the watershed belongs to. Mandatory.
     adm3: Adm3
         Adm3 reference.
-    traced: array
+    trace: array
         array with created time, updated and a active 
 
     Methods:
@@ -30,5 +30,5 @@ class Watershed(Document):
     }
     area=FloatField(max_length=100,required=True)
     name=StringField(max_length=100,required=True)
-    traced=ListField(required=True)
+    trace=DictField()
     adm3=ReferenceField(Adm3,required=True)

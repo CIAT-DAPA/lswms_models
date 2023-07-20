@@ -2,6 +2,7 @@ import unittest
 from mongoengine import connect, disconnect
 import sys
 import os
+from datetime import datetime
 
 # Asegúrate de tener las rutas correctas para importar los módulos
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -25,7 +26,7 @@ class TestAdm3(unittest.TestCase):
         self.adm1 = Adm1(
             name='zona prueba',
             ext_id='1132',
-            traced=['created_time', 'updated', 'active']
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True}
         )
         self.adm1.save()
 
@@ -33,7 +34,7 @@ class TestAdm3(unittest.TestCase):
         self.adm2 = Adm2(
             name='subzona prueba',
             ext_id='456',
-            traced=['created_time', 'updated', 'active'],
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True},
             adm1=self.adm1
         )
         self.adm2.save()
@@ -42,7 +43,7 @@ class TestAdm3(unittest.TestCase):
         self.adm3 = Adm3(
             name='subsubzona prueba',
             ext_id='789',
-            traced=['created_time', 'updated', 'active'],
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True},
             adm2=self.adm2,
             aclimate_id='64ad5835515640e690d80dba'
         )

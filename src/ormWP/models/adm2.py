@@ -1,4 +1,4 @@
-from mongoengine import Document, StringField, ReferenceField, ListField
+from mongoengine import Document, StringField, ReferenceField, ListField,DictField
 from .adm1 import Adm1
 class Adm2(Document):
 
@@ -13,7 +13,7 @@ class Adm2(Document):
         external id to identify.
     adm1: referencefield
         id of the adm1
-    traced: array
+    trace: array
         array with created time, updated and a active 
 
     Methods:
@@ -30,4 +30,4 @@ class Adm2(Document):
     name = StringField(max_length=150,required=True)
     ext_id = StringField(max_length=150, required=True)
     adm1 = ReferenceField(Adm1,required=True)
-    traced = ListField(required=True)
+    trace = DictField()
