@@ -43,7 +43,7 @@ class TestWatershed(unittest.TestCase):
         self.adm3 = Adm3(
             name='subsubzona prueba',
             ext_id='789',
-            trace=['created_time', 'updated', 'active'],
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True},
             adm2=self.adm2,
             aclimate_id='64ad5835515640e690d80dba'
         )
