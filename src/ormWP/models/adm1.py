@@ -12,7 +12,7 @@ class Adm1(Document):
         Name of the adm1. required.
     ext_id: str
         External identifier for the Adm1. Mandatory and unique.
-    traced: array
+    trace: array
         array with created time, updated and a active 
         
     Methods:
@@ -28,4 +28,4 @@ class Adm1(Document):
     }
     name = StringField(max_length=150,required=True)
     ext_id = StringField(max_length=150, required=True)
-    traced = ListField(required=True)
+    trace = DictField()

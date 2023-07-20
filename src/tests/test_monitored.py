@@ -15,6 +15,7 @@ from ormWP.models.watershed import Watershed
 from ormWP.models.adm1 import Adm1 
 from ormWP.models.adm2 import Adm2 
 from ormWP.models.adm3 import Adm3 
+from datetime import datetime
 
 # Conectarse a la base de datos de prueba
 
@@ -30,7 +31,7 @@ class TestMonitored(unittest.TestCase):
         self.adm1 = Adm1(
             name='zona prueba',
             ext_id='1132',
-            traced=['created_time', 'updated', 'active']
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True}
         )
         self.adm1.save()
 
@@ -38,7 +39,7 @@ class TestMonitored(unittest.TestCase):
         self.adm2 = Adm2(
             name='subzona prueba',
             ext_id='456',
-            traced=['created_time', 'updated', 'active'],
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True},
             adm1=self.adm1
         )
         self.adm2.save()
@@ -46,7 +47,7 @@ class TestMonitored(unittest.TestCase):
         self.adm3 = Adm3(
             name='subsubzona prueba',
             ext_id='789',
-            traced=['created_time', 'updated', 'active'],
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True},
             adm2=self.adm2,
             aclimate_id='64ad5835515640e690d80dba'
         )
@@ -56,7 +57,7 @@ class TestMonitored(unittest.TestCase):
         self.watershed = Watershed(
             area=100.0,
             name='watershed prueba',
-            traced=['created_time', 'updated', 'active'],
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True},
             adm3=self.adm3
         )
         self.watershed.save()
@@ -70,7 +71,7 @@ class TestMonitored(unittest.TestCase):
             other_attributes=['attr1', 'attr2'],
             watershed=self.watershed,
             ext_id='512',
-            traced=['created_time', 'updated', 'active']
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True}
         )
         self.waterpoint.save()
         # Crea un objeto DataEntry de prueba con referencia al objeto Waterpoint mockeado

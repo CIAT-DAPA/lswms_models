@@ -40,7 +40,7 @@ Attributes:
 
 - name: `str` Name of the Adm1(Zone).
 - ext_id: `str` external id from the Adm1(Zone). Mandatory.
-- traced: `array` array with created time, updated and a status from the Adm1(Zone). Mandatory.
+- trace: `dictfiel` dictfiel with created time, updated and a status from the Adm1(Zone). Mandatory.
 
 ### Adm2
 
@@ -50,7 +50,7 @@ Attributes:
 
 - name: `str` Name of the Adm2(Woreda).
 - ext_id: `str` external id from the Adm2(Woreda). Mandatory.
-- traced: `array` array with created time, updated and a status from the Adm2(Woreda). Mandatory.
+- trace: `dictfiel` dictfiel with created time, updated and a status from the Adm2(Woreda). Mandatory.
 - adm1: `ObjectId` Adm1 Reference id (zone). Mandatory.
 
 ### Adm3
@@ -61,7 +61,7 @@ Attributes:
 
 - name: `str` Name of the Adm3(Kebele).
 - ext_id: `str` external id from the Adm3(Kebele). Mandatory.
-- traced: `array` array with created time, updated and a status from the Adm3(Kebele). Mandatory.
+- trace: `dictfiel` dictfiel with created time, updated and a status from the Adm3(Kebele). Mandatory.
 - adm2: `ObjectId` Adm2 Reference id (woreda). Mandatory.
 
 
@@ -73,7 +73,7 @@ Attributes:
 
 - name: `str` Name of the watershed. Mandatory.
 - area: `float` Area of the watershed. Mandatory.
-- traced: `array` array with created time, updated and a status from the watershed. Mandatory.
+- trace: `dictfiel` dictfiel with created time, updated and a status from the watershed. Mandatory.
 - adm3: `ObjectId` Adm3 Reference id (kebele). Mandatory.
     
 
@@ -87,7 +87,7 @@ Attributes:
 - lat: `float` Latitude of the geographical location where the water point is located. Mandatory.
 - lon: `float` Longitude of the geographical location where the water point is located. Mandatory.
 - area: `float` Area of the waterpoint. Mandatory.
-- traced: `array` array with created time, updated and a status from the waterpoint. Mandatory.
+- trace: `dictfiel` dictfiel with created time, updated and a status from the waterpoint. Mandatory.
 - ext_id: `str` External identifier for the waterpoint.Mandatory.
 - other_attributes: `array` Additional attributes of the waterpoint. Optional.
 - climatology: `array` Array with the historical data for the waterpoint. Mandatory.

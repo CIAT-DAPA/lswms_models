@@ -1,4 +1,4 @@
-from mongoengine import Document, StringField, ReferenceField, ListField ,FloatField
+from mongoengine import Document, StringField, ReferenceField, ListField ,FloatField,DictField
 from .watershed import Watershed
 
 class Waterpoint(Document):
@@ -42,4 +42,4 @@ class Waterpoint(Document):
     climatology=ListField(required=False)
     other_attributes=ListField(required=False)
     watershed=ReferenceField(Watershed)
-    traced= ListField(required=True)
+    trace= DictField()
