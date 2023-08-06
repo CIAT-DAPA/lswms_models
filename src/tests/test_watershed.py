@@ -45,7 +45,6 @@ class TestWatershed(unittest.TestCase):
             ext_id='789',
             trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True},
             adm2=self.adm2,
-            aclimate_id='64ad5835515640e690d80dba'
         )
         self.adm3.save()
 
