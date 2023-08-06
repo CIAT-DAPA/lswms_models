@@ -49,7 +49,6 @@ class TestMonitored(unittest.TestCase):
             ext_id='789',
             trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True},
             adm2=self.adm2,
-            aclimate_id='64ad5835515640e690d80dba'
         )
         self.adm3.save()
 
@@ -71,7 +70,9 @@ class TestMonitored(unittest.TestCase):
             other_attributes=['attr1', 'attr2'],
             watershed=self.watershed,
             ext_id='512',
-            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True}
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True},
+            aclimate_id='64ad5835515640e690d80dba'
+            
         )
         self.waterpoint.save()
         # Crea un objeto DataEntry de prueba con referencia al objeto Waterpoint mockeado
