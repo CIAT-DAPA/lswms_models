@@ -13,8 +13,6 @@ class Adm3(Document):
         External id.
     adm2: referenciefield
         reference to an adm2.
-    aclimate_id: str
-        id for aclimate.
     trace: array
        array with created time, updated and a active 
         
@@ -32,5 +30,4 @@ class Adm3(Document):
     name = StringField(max_length=100,required=True)
     ext_id = StringField(max_length=150, required=True)
     adm2 = ReferenceField(Adm2,required=True)
-    aclimate_id = StringField(max_length=150, required=True)
     trace= DictField()

@@ -16,7 +16,7 @@ class TestTypeContent(unittest.TestCase):
 
     def setUp(self):
         disconnect()  # Desconectarse de cualquier conexión existente
-        connect('test_gap_analysis', host='mongomock://localhost')
+        connect('test_water_point', host='mongomock://localhost')
 
         # Crea un objeto TypeContent de prueba
         self.typecontent = Typecontent(

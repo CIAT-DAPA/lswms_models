@@ -20,6 +20,8 @@ class Waterpoint(Document):
         historical dada from of the waterpoint
     watershed: Watershed
         reference to watershed
+    aclimate_id: str
+        id for aclimate.
     other_atributes: array
         other attributes for the waterpoint
         
@@ -43,3 +45,4 @@ class Waterpoint(Document):
     other_attributes=ListField(required=False)
     watershed=ReferenceField(Watershed)
     trace= DictField()
+    aclimate_id = StringField(max_length=150, required=True)
