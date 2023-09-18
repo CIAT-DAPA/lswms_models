@@ -20,7 +20,8 @@ class TestTypeContent(unittest.TestCase):
 
         # Crea un objeto TypeContent de prueba
         self.typecontent = Typecontent(
-            name='Livehood'
+            name='Livehood',
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True}
         )
 
     def tearDown(self):
