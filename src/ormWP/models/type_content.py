@@ -23,3 +23,4 @@ class Typecontent(Document):
         'collection': 'typcontent'
     }
     name=StringField(max_length=100,required=True)
+    trace= DictField()
