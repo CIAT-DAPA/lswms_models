@@ -1,4 +1,4 @@
-from mongoengine import Document, StringField, ReferenceField, ListField ,FloatField
+from mongoengine import Document, StringField, ReferenceField, ListField ,FloatField,DictField
 from .watershed import Watershed
 
 class Typecontent(Document):
@@ -23,3 +23,4 @@ class Typecontent(Document):
         'collection': 'typcontent'
     }
     name=StringField(max_length=100,required=True)
+    trace= DictField()

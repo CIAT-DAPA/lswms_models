@@ -2,6 +2,8 @@ import unittest
 from mongoengine import connect, disconnect
 import sys
 import os
+from datetime import datetime
+
 
 # Asegúrate de tener las rutas correctas para importar los módulos
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -20,7 +22,8 @@ class TestTypeContent(unittest.TestCase):
 
         # Crea un objeto TypeContent de prueba
         self.typecontent = Typecontent(
-            name='Livehood'
+            name='Livehood',
+            trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True}
         )
 
     def tearDown(self):
