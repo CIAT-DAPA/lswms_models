@@ -8,3 +8,4 @@ from .models.type_content import Typecontent
 from .models.waterpoint import Waterpoint
 from .models.monitored import Monitored
 from .models.ws_content import Wscontent
+from .models.suscription import Suscription, Boletin
