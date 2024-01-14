@@ -7,3 +7,5 @@ from .wp_content import Wpcontent
 from .ws_content import Wscontent
 from .waterpoint import Waterpoint
 from .type_content import Typecontent
+
+from .suscription import Suscription, Boletin
