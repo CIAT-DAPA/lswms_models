@@ -37,5 +37,5 @@ class Suscription(Document):
 
     userId = StringField(max_length=150, required=True)
     boletin = EnumField(Boletin, required=True)
-    waterpoint = StringField(max_length=150, required=True)
+    waterpoint = ListField()
     trace = DictField()
