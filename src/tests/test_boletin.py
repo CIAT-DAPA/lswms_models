@@ -19,7 +19,7 @@ class TestBoletin(unittest.TestCase):
         self.suscription = Suscription(
             userId='sjcne92929',
             boletin=Boletin.ALERT,
-            waterpoint='1828291jsjsj',
+            waterpoint=['1828291jsjsj'],
             trace={"created": datetime.now(), "updated": datetime.now(), "enabled": True}
         )
 
@@ -32,7 +32,7 @@ class TestBoletin(unittest.TestCase):
         suscription = Suscription.objects(id=self.suscription.id).first()
         self.assertEqual(suscription.userId, 'sjcne92929')
         self.assertEqual(suscription.boletin, Boletin.ALERT)
-        self.assertEqual(suscription.waterpoint, '1828291jsjsj')
+        self.assertEqual(suscription.waterpoint, ['1828291jsjsj'])
 
 if __name__ == '__main__':
     unittest.main()
