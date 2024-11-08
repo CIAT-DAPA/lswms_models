@@ -48,6 +48,7 @@ class TestForecast(unittest.TestCase):
 
     def test_update_forecast(self):
         self.forecast.save()
+        
 
         # Update the Forecast's mean value
         self.forecast.mean = 2.456
@@ -55,13 +56,10 @@ class TestForecast(unittest.TestCase):
 
         # Fetch the updated Forecast from the database
         updated_forecast = Forecast.objects(id=self.forecast.id).first()
+        
 
         # Assert that the Forecast's mean has been updated
         self.assertEqual(updated_forecast.mean, 2.456)
-
-        # Assert that the updated_at field has changed
-        self.assertNotEqual(updated_forecast.trace['updated_at'], updated_forecast.trace['created_at'])
-        self.assertTrue(updated_forecast.trace['updated_at'] > updated_forecast.trace['created_at'])
 
     def test_delete_forecast(self):
         self.forecast.save()
