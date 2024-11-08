@@ -1,5 +1,5 @@
 from mongoengine import Document, StringField, DictField
-from datetime import datetime
+from datetime import datetime,timezone
 
 class Woreda(Document):
     """
@@ -42,15 +42,23 @@ class Woreda(Document):
 
     def save(self, *args, **kwargs):
         """Override save to update the 'updated_at' field."""
+        now = datetime.now(timezone.utc)
+
         if not self.trace:
+            # Initialize the trace field if it's missing
             self.trace = {
-                'created_at': datetime.now(),
-                'updated_at': datetime.now(),
-                'enabled': True
+                'created_at': now,
+                'updated_at': now,
+                'enabled': True 
             }
         else:
-            self.trace['updated_at'] = datetime.now()
+            # Update the 'updated_at' field
+            self.trace['updated_at'] = now
 
+        # Explicitly mark the 'trace' field as modified
         self._mark_as_changed('trace')
 
+        # Persist changes
         return super().save(*args, **kwargs)
+        
+

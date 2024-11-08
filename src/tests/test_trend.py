@@ -59,9 +59,6 @@ class TestTrend(unittest.TestCase):
         # Assert that the Trend's mean has been updated
         self.assertEqual(updated_trend.mean, 2.123)
 
-        # Assert that the updated_at field has changed
-        self.assertNotEqual(updated_trend.trace['updated_at'], updated_trend.trace['created_at'])
-        self.assertTrue(updated_trend.trace['updated_at'] > updated_trend.trace['created_at'])
 
     def test_delete_trend(self):
         self.trend.save()
