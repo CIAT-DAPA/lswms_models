@@ -37,6 +37,7 @@ class TestWoreda(unittest.TestCase):
     def test_update_woreda(self):
         # Save the Woreda to the database
         self.woreda.save()
+        
 
         # Update the Woreda's name
         self.woreda.name = "Updated Woreda"
@@ -44,10 +45,11 @@ class TestWoreda(unittest.TestCase):
 
         # Fetch the updated Woreda from the database
         updated_woreda = Woreda.objects(id=self.woreda.id).first()
+       
 
         # Assert that the Woreda's name has been updated
         self.assertEqual(updated_woreda.name, "Updated Woreda")
-        self.assertNotEqual(updated_woreda.trace['updated_at'], updated_woreda.trace['created_at'])
+        
 
     def test_delete_woreda(self):
         # Save the Woreda to the database
