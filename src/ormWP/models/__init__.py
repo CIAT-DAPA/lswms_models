@@ -8,4 +8,9 @@ from .ws_content import Wscontent
 from .waterpoint import Waterpoint
 from .type_content import Typecontent
 
+from .woreda import Woreda
+from .trend import Trend
+from .forecast import Forecast
+
+
 from .suscription import Suscription, Boletin
