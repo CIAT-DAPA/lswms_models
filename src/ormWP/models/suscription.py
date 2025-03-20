@@ -7,6 +7,7 @@ class Boletin(Enum):
     """
     ALERT = 'alert'
     WEEKLY = 'weekly'
+    FORECAST = 'forecast'
 
 
 
