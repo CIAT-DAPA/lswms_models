@@ -77,7 +77,7 @@ jobs:
       run: zip releaseModels.zip ./src/* -r
     # Upload Artifacts
     - name: Upload Model artifact for deployment job
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ORM
         path: releaseModels.zip
