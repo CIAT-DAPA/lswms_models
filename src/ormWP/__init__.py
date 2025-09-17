@@ -12,3 +12,4 @@ from .models.waterpoint import Waterpoint
 from .models.monitored import Monitored
 from .models.ws_content import Wscontent
 from .models.suscription import Suscription, Boletin
+from .models.advisories import Advisory

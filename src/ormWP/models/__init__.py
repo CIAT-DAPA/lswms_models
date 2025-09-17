@@ -11,6 +11,6 @@ from .type_content import Typecontent
 from .woreda import Woreda
 from .trend import Trend
 from .forecast import Forecast
-
+from .advisories import Advisory
 
 from .suscription import Suscription, Boletin
