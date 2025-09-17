@@ -11,3 +11,4 @@ from .ormWP.models.waterpoint import Waterpoint
 from .ormWP.models.monitored import Monitored
 from .ormWP.models.ws_content import Wscontent
 from .ormWP.models.suscription import Suscription, Boletin
+from .ormWP.models.advisories import Advisory
