@@ -14,3 +14,4 @@ from .models.ws_content import Wscontent
 from .models.suscription import Suscription, Boletin
 from .models.advisories import Advisory
 from .models.advisotypdf import AdvisoryPdf
+from .models.advisotypdf import AdvisoryTypeEnum

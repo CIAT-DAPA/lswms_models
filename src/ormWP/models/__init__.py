@@ -15,3 +15,4 @@ from .advisories import Advisory
 
 from .suscription import Suscription, Boletin
 from .advisotypdf import AdvisoryPdf
+from .advisotypdf import AdvisoryTypeEnum
