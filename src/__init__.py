@@ -13,3 +13,4 @@ from .ormWP.models.ws_content import Wscontent
 from .ormWP.models.suscription import Suscription, Boletin
 from .ormWP.models.advisories import Advisory
 from .ormWP.models.advisotypdf import AdvisoryPdf
+from .ormWP.models.advisotypdf import AdvisoryTypeEnum
