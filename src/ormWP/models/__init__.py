@@ -14,3 +14,4 @@ from .forecast import Forecast
 from .advisories import Advisory
 
 from .suscription import Suscription, Boletin
+from .advisotypdf import AdvisoryPdf
