@@ -28,6 +28,7 @@ class SeasonalForecast(Document):
     }
 
     year = IntField(required=True)
+    month = IntField(required=True, min_value=1, max_value=12)
     probabilities = EmbeddedDocumentField(Probability, required=True)
     waterpoint = ReferenceField(Waterpoint)
 
