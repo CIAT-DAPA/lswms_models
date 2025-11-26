@@ -14,3 +14,6 @@ from .ormWP.models.suscription import Suscription, Boletin
 from .ormWP.models.advisories import Advisory
 from .ormWP.models.advisotypdf import AdvisoryPdf
 from .ormWP.models.advisotypdf import AdvisoryTypeEnum
+from .ormWP.models.probability import Probability
+from .ormWP.models.seasonal_forecast import SeasonalForecast
+from .ormWP.models.subseasonal_forecast import SubseasonalForecast
