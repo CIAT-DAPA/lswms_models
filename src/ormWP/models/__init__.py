@@ -16,3 +16,6 @@ from .advisories import Advisory
 from .suscription import Suscription, Boletin
 from .advisotypdf import AdvisoryPdf
 from .advisotypdf import AdvisoryTypeEnum
+from .probability import Probability
+from .seasonal_forecast import SeasonalForecast
+from .subseasonal_forecast import SubseasonalForecast
